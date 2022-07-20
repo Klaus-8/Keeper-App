@@ -63,7 +63,7 @@ function Note(props) {
 
       <button
         onClick={() => {
-          props.onDelete(props.id);
+          props.onDelete(props.noteId);
         }}
       >
         <Delete />

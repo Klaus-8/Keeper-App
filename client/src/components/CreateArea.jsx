@@ -10,7 +10,7 @@ const CreateArea = (props) => {
   });
 
   const [inputNote, setInputNote] = useState({
-    id: "",
+    noteId: "",
     title: "",
     content: "",
   });
@@ -22,7 +22,7 @@ const CreateArea = (props) => {
       return {
         ...oldObject,
         [name]: value,
-        id: newId,
+        noteId: newId,
       };
     });
   };
@@ -34,7 +34,7 @@ const CreateArea = (props) => {
         onSubmit={(event) => {
           props.onClicked(inputNote);
           setInputNote({
-            id: "",
+            noteId: "",
             title: "",
             content: "",
           });
