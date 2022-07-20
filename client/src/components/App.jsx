@@ -14,7 +14,7 @@ function App() {
   };
 
   const deleteNote = (noteId) => {
-    setAllNotes(allNotes.filter((n) => n.id !== noteId));
+    setAllNotes(allNotes.filter((n) => n.noteId !== noteId));
   };
 
   return (
@@ -23,8 +23,8 @@ function App() {
       <CreateArea onClicked={addNote} />
       {allNotes.map((singleNote) => (
         <Note
-          key={singleNote.id}
-          id={singleNote.id}
+          key={singleNote.noteId}
+          noteId={singleNote.noteId}
           title={singleNote.title}
           content={singleNote.content}
           note={singleNote}
